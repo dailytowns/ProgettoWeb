@@ -1,0 +1,112 @@
+@font-face {
+  font-family: 'alex';
+  src: url('AlexBrush-Regular.ttf') format ('truetype');
+}
+
+body {
+	background-image: url("Modern-Flat-in-Kyiv-03[1].jpg");
+	background-color: #FFFFFF;
+	background-repeat: no-repeat;
+	background-size:1280px 800px;
+	font-family: Verdana, sans-serif;
+}
+
+#benvenuto {
+	float: right;
+}
+
+fieldset { 
+	border: none;
+}
+
+legend { 
+	font-size: 16px; 
+	font-weight: bold; 
+}
+
+fieldset legend {
+    font-size: 12px;
+    font-weight: bold;
+    padding: 5px 0;
+}
+
+#header {
+	float: right;
+}
+
+#title {
+	position: absolute;
+	top: 15%;
+	left: 35%;
+}
+
+#Welcome {
+	font-style: 'alex';
+	font-stretch: expanded;
+}
+
+#input {
+	position: absolute;
+	top: 60%;
+	left:25%;
+}
+
+.input {
+	border-radius: 5px;
+}
+
+#btnPremium {
+	float: right;
+	border-radius: 5px;
+  background: #3498db;
+  font-family: Arial;
+  font-style: italic;
+  background-color: yellow;
+  font-weight: bold;
+}
+
+#Accedi {
+	float:right;
+	vertical-align: bottom;
+	border-radius:5px;
+}
+
+#btnSubmitRegistraStruttura {
+	float: right;
+	border-radius: 5px;
+}
+
+#btnGestione {
+		float: right;
+	border-radius: 5px;
+}
+
+#btnInserisciLocazione {
+			float: right;
+	border-radius: 5px;
+}
+
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+select {
+    padding:3px;
+    border-radius:4px;
+    background: #f8f8f8;
+    color:#888;
+    display: inline-block;
+    cursor:pointer;
+}
+
+sup {
+    vertical-align: super;
+    font-size: smaller;
+}
+}
