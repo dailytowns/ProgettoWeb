@@ -95,25 +95,13 @@ public class Segnalazione implements Serializable{
 	}
 	
 	public void salva() throws IOException, ClassNotFoundException {
-		
 		String path = "C:/Users/feder_000/workspace/RentFlatWeb/Segnalazioni.ser";
-		BufferedReader br = new BufferedReader(new FileReader(path));
-		ObjectOutputStream oos = null;
-		if (br.readLine() == null)
-			{ FileOutputStream fos = new FileOutputStream("C:/Users/feder_000/workspace/RentFlatWeb/Segnalazioni.ser");
-			oos = new ObjectOutputStream(fos);
-			oos.writeObject(this);
-			oos.flush();
-			oos.close();}
-		else {
-			FileOutputStream fos = new FileOutputStream("C:/Users/feder_000/workspace/RentFlatWeb/Segnalazioni.ser", true);
-			//oos = new MyObjectOutputStream(fos);
-			oos.writeObject(this);
-			oos.flush();
-			oos.close();
-		}
-		br.close();
-		oos.close();
+		FileOutputStream fos = new FileOutputStream(path, true);
+		MyObjectOutputStream oos = MyObjectOutputStream.getInstance(fos);
+		oos.writeObject(this);
+		oos.flush();
+		//Lo stream non può essere chiuso, non verrà creata un'altra istanza --> IOException
+		//oos.close();
 	}
 	
 	public static void main(String[] args) throws IOException, ClassNotFoundException {

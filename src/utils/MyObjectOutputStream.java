@@ -41,20 +41,16 @@ public class MyObjectOutputStream extends ObjectOutputStream {
 	//create an object of SingleObject
 	   private static MyObjectOutputStream instance = null;
 
-	   private MyObjectOutputStream () throws IOException{}
-	   
+	   private MyObjectOutputStream (FileOutputStream fos) throws IOException {
+		   super(fos);
+	   }
 	   //make the constructor private so that this class cannot be
 	   //instantiated
-	   private MyObjectOutputStream (FileOutputStream fos) throws IOException{
+	   public static MyObjectOutputStream getInstance(FileOutputStream fos) throws IOException {
 		   if(instance == null) {
-			   instance = super(fos);
-			   
+			   instance = new MyObjectOutputStream(fos);
+		   }
 			return instance;
-	   }
-
-	   //Get the only object available
-	   public static MyObjectOutputStream getInstance(){
-	      return instance;
 	   }
 
 	   public void showMessage(){
@@ -63,9 +59,6 @@ public class MyObjectOutputStream extends ObjectOutputStream {
 
 	@Override
 	  protected void writeStreamHeader() throws IOException {
-	    // do not write a header, but reset:
-	    // this line added after another question
-	    // showed a problem with the original
 		reset();
 	  }	
 }

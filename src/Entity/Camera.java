@@ -35,7 +35,6 @@ public class Camera implements Serializable{
 	private ArrayList<String> servizi;
 	private String[] arrayFoto;
 	private boolean[] disponibilita;
-	private int indice;
 	//private Cliente cliente;
 	private Struttura struttura;
 	private int prezzoPerNotte;
@@ -98,20 +97,6 @@ public class Camera implements Serializable{
 	 */
 	public void setIdCamera(int idCamera) {
 		this.idCamera = idCamera;
-	}
-	
-	/**
-	 * @return the indice
-	 */
-	public int getIndice() {
-		return indice;
-	}
-
-	/**
-	 * @param indice the indice to set
-	 */
-	public void setIndice(int indice) {
-		this.indice = indice;
 	}
 	
 	/**
