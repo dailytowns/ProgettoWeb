@@ -1,5 +1,8 @@
-function setIndex(){
-	var id = '"ession["lengthAL"]';
+var btnName;
+function assegnaNome(btn){
+	btnName = btn.name.toString();
+}
 
-	alert(id.toString());
+function segnala(btn){
+	btn.name = btnName;
 }
